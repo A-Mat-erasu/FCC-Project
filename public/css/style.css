@@ -1,0 +1,232 @@
+:root {
+  --primary-navy: #0f172a;
+  --secondary-navy: #1e293b;
+  --accent-blue: #0284c7;
+  --accent-hover: #0369a1;
+  --bg-slate: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --success-emerald: #10b981;
+  --warning-amber: #f59e0b;
+  --danger-red: #ef4444;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-slate);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.app-navbar {
+  background-color: var(--primary-navy);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.app-navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff !important;
+}
+
+.app-navbar .nav-link {
+  color: #94a3b8 !important;
+  font-weight: 500;
+  padding: 0.6rem 1rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.app-navbar .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-navbar .nav-link.active {
+  color: #ffffff !important;
+  background-color: var(--accent-blue) !important;
+}
+
+/* User Profile Badge & Dropdown */
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--secondary-navy);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.profile-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+.profile-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Custom Card & Table Styles */
+.custom-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.custom-card-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.stat-card {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* Centered Auth Card */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  padding: 1.5rem;
+}
+
+.auth-card {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.auth-header {
+  background: #ffffff;
+  padding: 2rem 2rem 1rem 2rem;
+  text-align: center;
+}
+
+.auth-body {
+  padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.role-pill-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  background: #f8fafc;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.role-pill-btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.role-pill-btn:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.role-pill-btn.active {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+}
+
+/* Blood Type Badge */
+.badge-blood {
+  font-family: monospace;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+}
+
+/* Viability Badges */
+.badge-viability-ok {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-viability-warn {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-viability-danger {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Clean Form Controls */
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.btn-primary {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Modal and popover improvements */
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: #f8fafc;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+}
